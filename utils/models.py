@@ -29,7 +29,7 @@ model = init_chat_model("openai:o3-mini")
 
 
 """AZURE OpenAI Version"""
-# from langchain_openai import AzureChatOpenAI
+from langchain_openai import AzureChatOpenAI
 # # from langchain_anthropic import ChatAnthropic
 # # from langchain_google_vertexai import ChatVertexAI
 # from azure.identity import InteractiveBrowserCredential
@@ -43,10 +43,10 @@ model = init_chat_model("openai:o3-mini")
 # For AzureOpenAI, make sure you set AZURE_OPENAI_API_KEY and AZURE_OPENAI_ENDPOINT
 
 # Azure OpenAI: Using Environment Variables
-# AZURE_OPENAI_GPT_4O = AzureChatOpenAI(
-#     azure_deployment="gpt-4o",
-#     streaming=True
-# )
+model = AzureChatOpenAI(
+    azure_deployment="gpt-4.1-mini",
+    streaming=True
+)
 
 # Azure OpenAI: Using Azure AD
 # AZURE_OPENAI_GPT_4O = AzureChatOpenAI(
